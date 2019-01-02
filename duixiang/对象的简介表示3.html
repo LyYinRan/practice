@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+          #container{
+              width: 500px;
+              height: 500px;
+              border: 1px saddlebrown solid;
+              margin: 100px auto;
+          }
+          .title{
+              text-align: center;
+          }
+          .font-font{
+              padding: 10px 10px;
+          }
+          #send{
+              border: 1px solid saddlebrown;
+              display: none;
+          }
+          .close{
+              cursor: pointer;
+          }
+          
+    </style>
+</head>
+<body>
+        <input id="btn" type="button" value="发表文章">
+    <div id="container">
+        <!-- <h3 class="title">这是标题</h3>
+        <p class="font-font">这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p> -->
+    </div>
+    <div id="send">
+            <h3>发表文章<span class="close">关闭</span></h3>
+            <p>
+                <label for="">标题：</label>
+                <input type="text" id="p_title" placeholder="请输入文章的标题">
+            </p>
+
+            <p>
+                <label for="">内容：</label>
+                <textarea name="name" id="t_text"></textarea>
+            </p>
+            <p>
+                <input type="button" value="发布" id="sub">
+            </p>
+    </div>
+</body>
+<script>
+     var btn = document.getElementById("btn");
+     var send = document.getElementById("send");
+     var close =document.getElementsByClassName("close")[0];
+     var ptitle  =document.getElementById("p_title");
+     var Ttext = document.getElementById("p_title");
+     var sub = document.getElementById("sub");
+     var container = document.getElementById("container");
+     btn.onclick=function(){
+           send.style.display="block";
+     }
+     close.onclick=function(){
+         send.style.display="none";
+     }
+    
+      sub.onclick=function(){
+          console.log(sub)
+         let  Ptitle = ptitle.value();
+         
+          let   TTT = Ttext.value(); 
+        container.innerHTML=
+            `<h3 class="title">${Ptitle}</h3> <p class="font-font">${TTT}</p>`
+        
+        send.style.display="none";
+      }
+
+     
+</script>
+</html>

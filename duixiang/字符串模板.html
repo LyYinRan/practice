@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      #box{
+          width: 500px;
+          height: 500px;
+          border: 1px solid saddlebrown;
+          margin: 100px auto;
+      }
+    </style>
+</head>
+<body>
+        <input type="button" value="发表" id="btn">
+        <div id="box">
+    
+    
+        </div>
+</body>
+
+<script>
+        //  var box ="word";
+        //  console.log(`helle${box}`);
+
+        let btn = document.getElementById('btn');
+        let box = document.getElementById("box");
+
+         let a = "itme1";
+         let b = "itme2";
+
+         btn.onclick=function(){
+               box.innerHTML="<ul>\
+               <li>"+a+"</li>\
+               <li>"+b+"</li>\
+               </ul>"
+         }
+
+</script>
+</html>
